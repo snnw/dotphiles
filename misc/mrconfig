@@ -1,0 +1,93 @@
+[DEFAULT]
+include = cat /usr/share/mr/lib/git-svn
+
+[life]
+checkout = git clone 'git@bitbucket.org:snnw/life.git' 'life'
+
+[src/lists]
+checkout = git clone 'git@bitbucket.org:snnw/snnw_lists.git' 'lists'
+
+[src/bin]
+checkout = git clone 'git@bitbucket.org:snnw/snnw_bin.git' 'bin'
+
+[projects]
+checkout = git clone 'git@bitbucket.org:snnw/snnw_projects.git' 'projects'
+
+[.dotfiles]
+checkout = git clone 'git@github.com:snnw/dotphiles.git' '.dotfiles'
+zap = 
+	 git fetch upstream
+	 git merge upstream/master
+	 git push origin master
+
+[src/archive/database-technology]
+checkout = git clone 'git@bitbucket.org:cse-masters/ws-dt.git' 'database-technology'
+
+[src/archive/geometric-algorithms]
+checkout = git clone 'http://willem3141.webfactional.com/git_ga/ga-code.git' 'geometric-algorithms'
+
+[src/archive/massive-data-code]
+checkout = git clone 'http://willem3141.webfactional.com/git_ga/amd-code.git' 'massive-data-code'
+
+[src/archive/massive-data-docs]
+checkout = git clone 'http://willem3141.webfactional.com/git_ga/amd-docs.git' 'massive-data-docs'
+
+[src/archive/semi_index]
+checkout = git clone 'git@github.com:snnw/semi_index.git' 'semi_index'
+
+[src/archive/sicg]
+checkout = git clone 'git@bitbucket.org:cse-masters/ts-sicg.git' 'sicg'
+
+[src/archive/castle-builder-perfection]
+checkout = git clone 'git@bitbucket.org:snnw/molpy.git' 'castle-builder-perfection'
+
+[src/dev/eca-hives]
+checkout = git clone 'git@bitbucket.org:snnw/ecg-hives.git' 'ecg-hives'
+
+[src/dev/gtk]
+checkout = git clone 'https://github.com/GNOME/gtk.git' 'gtk'
+
+[src/dev/linux]
+checkout = 
+	 git clone 'git@bitbucket.org:snnw/eudyptula-linux.git' 'linux'
+	 cd linux
+	 git remote add upstream 'git://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git'
+
+status = echo "skipping..."
+zap = 
+	 git fetch upstream
+	 git merge upstream/master
+	 git push origin master
+
+[src/dev/little]
+checkout = git clone 'git@bitbucket.org:snnw/eudyptula.git' 'little'
+
+[src/dev/xmas]
+checkout = git svn clone 'https://svn.cs.ru.nl/repos/xmas' 'xmas'
+
+[src/doc/capita-report]
+checkout = git clone 'git@bitbucket.org:snnw/capita-fsa.git' 'capita-report'
+
+[src/doc/logic-faq]
+checkout = git clone 'git@bitbucket.org:snnw/lst-faq-document.git' 'logic-faq'
+
+[src/tools/afew]
+checkout = git clone 'https://github.com/teythoon/afew.git' 'afew'
+
+[src/tools/fish-shell]
+checkout = git clone 'git://github.com/fish-shell/fish-shell.git' 'fish-shell'
+
+[src/tools/gnome-terminal-colors-solarized]
+checkout = git clone 'https://github.com/Anthony25/gnome-terminal-colors-solarized.git' 'gnome-terminal-colors-solarized'
+
+[src/tools/hub]
+checkout = git clone 'https://github.com/github/hub.git' 'hub'
+
+[src/tools/ledger]
+checkout = git clone 'https://github.com/ledger/ledger.git' 'ledger'
+
+[src/tools/ninja]
+checkout = git clone 'https://github.com/martine/ninja.git' 'ninja'
+
+[src/tools/z3]
+checkout = git clone 'https://git01.codeplex.com/z3' 'z3'

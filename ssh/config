@@ -17,6 +17,9 @@ HashKnownHosts no
 #Host hostname hostname.fqdn.com
 #    Hostname hostname.fqdn.com
 
+Host *.ics.ele.tue.nl
+User pd1409
+
 # Default
 Host *
     #User username

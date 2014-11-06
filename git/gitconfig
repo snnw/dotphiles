@@ -9,8 +9,8 @@
 
 # Global Config
 [user]
-    #name = "**Your Name**"
-    #email = "**Your Email**"
+    name = Sanne Wouda
+    email = sanne.wouda@gmail.com
     #signingkey = **Your GPG ID**
 
 [branch "master"]
@@ -49,8 +49,12 @@
     branch = magenta
 
 [core]
+    editor = /usr/bin/vim
+    autocrlf = false
+    filemode = false
     pager = less -FRSX
     whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
+    deltaBaseCacheLimit = 1G
 
 [diff]
     tool = vimdiff
@@ -141,7 +145,7 @@
     rem = remote rename
 
 [push]
-    default = matching
+    default = simple
 
 [url "git@github.com:"]
     insteadof = github:
