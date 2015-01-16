@@ -32,14 +32,16 @@ git/tigrc
 git/gitk
 #gnupg
 #grc
+gyp
 #input/editrc
 #input/inputrc
 #irssi
 #mpd/mpd.conf
-#mercurial/hgrc
+mercurial/hgrc
 #mercurial/hgignore
 misc/fonts.conf
 misc/gdbinit
+misc/ledgerrc
 misc/mrconfig
 #mutt
 #mutt/muttrc
