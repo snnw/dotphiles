@@ -38,7 +38,6 @@ git/gitk
 #mpd/mpd.conf
 #mercurial/hgrc
 #mercurial/hgignore
-mailcap
 misc/fonts.conf
 misc/gdbinit
 misc/mrconfig
@@ -48,6 +47,7 @@ misc/mrconfig
 #mysql/my.cnf
 #ncmpcpp/config
 #ncmpcpp/error.log
+notmuch/mailcap
 #postgresql/psqlrc
 #python/pythonrc
 #python/pylintrc
