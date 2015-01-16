@@ -37,6 +37,7 @@ git/gitk
 #irssi
 #mercurial/hgrc
 #mercurial/hgignore
+mailcap
 misc/fonts.conf
 misc/gdbinit
 misc/mrconfig

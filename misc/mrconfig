@@ -41,13 +41,13 @@ checkout = git clone 'git@bitbucket.org:cse-masters/ts-sicg.git' 'sicg'
 [src/archive/castle-builder-perfection]
 checkout = git clone 'git@bitbucket.org:snnw/molpy.git' 'castle-builder-perfection'
 
-[src/dev/eca-hives]
+[src/code/eca-hives]
 checkout = git clone 'git@bitbucket.org:snnw/ecg-hives.git' 'ecg-hives'
 
-[src/dev/gtk]
+[src/code/gtk]
 checkout = git clone 'https://github.com/GNOME/gtk.git' 'gtk'
 
-[src/dev/linux]
+[src/code/linux]
 checkout = 
 	 git clone 'git@bitbucket.org:snnw/eudyptula-linux.git' 'linux'
 	 cd linux
@@ -59,10 +59,10 @@ zap =
 	 git merge upstream/master
 	 git push origin master
 
-[src/dev/little]
+[src/code/little]
 checkout = git clone 'git@bitbucket.org:snnw/eudyptula.git' 'little'
 
-[src/dev/xmas]
+[src/code/xmas]
 checkout = git svn clone 'https://svn.cs.ru.nl/repos/xmas' 'xmas'
 
 [src/doc/capita-report]
@@ -91,3 +91,12 @@ checkout = git clone 'https://github.com/martine/ninja.git' 'ninja'
 
 [src/tools/z3]
 checkout = git clone 'https://git01.codeplex.com/z3' 'z3'
+
+[src/doc/visualization]
+checkout = git clone 'git@bitbucket.org:snnw/visualization-doc.git' 'visualization'
+
+[src/code/viz-one]
+checkout = git clone 'git@bitbucket.org:snnw/viz-one.git' 'viz-one'
+
+[src/doc/thesis]
+checkout = git clone 'git@bitbucket.org:snnw/thesis.git' 'thesis'
