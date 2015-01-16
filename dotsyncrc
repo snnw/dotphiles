@@ -35,6 +35,7 @@ git/gitk
 #input/editrc
 #input/inputrc
 #irssi
+#mpd/mpd.conf
 #mercurial/hgrc
 #mercurial/hgignore
 mailcap
@@ -45,6 +46,8 @@ misc/mrconfig
 #mutt/muttrc
 #mutt/offlineimaprc
 #mysql/my.cnf
+#ncmpcpp/config
+#ncmpcpp/error.log
 #postgresql/psqlrc
 #python/pythonrc
 #python/pylintrc
