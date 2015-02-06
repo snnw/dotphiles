@@ -1,5 +1,4 @@
-#
-# dotphiles : https://github.com/dotphiles/dotphiles
+# # dotphiles : https://github.com/dotphiles/dotphiles
 #
 # Config for dotsync.
 #
@@ -23,6 +22,7 @@ anacron
 #aptitude
 #bin:bin
 #ctags/ctags
+config_fish/config.fish:.config/fish/config.fish
 #cmus
 #curl/curlrc
 git/gitconfig
