@@ -17,13 +17,28 @@ if has("user_commands")
   set rtp+=~/.vim/bundle/vundle/
   call vundle#rc()
   "let g:vundles=['general', 'git', 'hg', 'programming', 'completion', 'ruby', 'python', 'misc']
-  let g:vundles=['general', 'git', 'programming']
-  let g:neocomplcache_enable_at_startup = 1
+  "let g:vundles=['general']
+  let g:vundles=[]
+  "let g:neocomplcache_enable_at_startup = 1
   " Load 'vundles'
   source ~/.vim/vundles.vim
   " Add extra bundles here...
   " Bundle 'reponame'
+  Bundle 'chriskempson/base16-vim'
   Plugin 'flazz/vim-colorschemes'
+  Bundle 'dag/vim-fish'
+  Bundle 'vim-scripts/lh-vim-lib'
+  Bundle 'LucHermitte/local_vimrc'
+  "Bundle 'rhysd/vim-clang-format'
+  Plugin 'google/vim-glaive'
+  Plugin 'google/vim-maktaba'
+  Plugin 'google/vim-codefmtlib'
+  Plugin 'google/vim-codefmt'
+
+  call glaive#Install()
+
+  Glaive codefmt plugin[mappings]=1
+
 endif
 
 " Customize to your needs...

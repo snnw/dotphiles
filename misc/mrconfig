@@ -103,3 +103,9 @@ checkout = git clone 'git@bitbucket.org:snnw/thesis.git' 'thesis'
 
 [src/tools/alot]
 checkout = git clone 'git@github.com:pazz/alot.git' 'alot'
+
+[src/code/llvm]
+checkout = git clone 'http://llvm.org/git/llvm.git' 'llvm'
+
+[src/code/viz-three]
+checkout = git clone 'git@bitbucket.org:snnw/viz-three.git' 'viz-three'
