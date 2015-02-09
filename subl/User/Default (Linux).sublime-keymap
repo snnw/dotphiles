@@ -1,0 +1,15 @@
+[
+	{ "keys": ["j", "j"], "command": "set_action", "args": {"action": "vi_esc"},
+		"context":
+		[
+			{"key": "vi_mode_insert"},
+			{"key": "vi_is_buffer"}
+		]
+	},
+	{ "keys" : ["ctrl+shift+c"], "command": "clang_format"},
+
+  { "keys": ["ctrl+f5", "ctrl+d"],
+    "command": "insert_date",
+    "args": {"format": "%a %x" } },
+
+]

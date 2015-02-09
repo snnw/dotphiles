@@ -68,6 +68,7 @@ shell/bashrc
 shell/profile
 #shell/urlview
 ssh
+subl/User:.config/sublime-text-3/Packages/User
 #subversion
 #task/task
 #task/taskrc
