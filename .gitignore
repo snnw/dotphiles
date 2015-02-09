@@ -7,7 +7,6 @@
 *.swp
 .DS_Store
 *~
-*.sublime-*
 *.d/localhost
 aptitude/cache
 cmus/autosave

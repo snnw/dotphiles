@@ -1,0 +1,4 @@
+{
+	"cmd": ["pdflatex", "$file"],
+	"working_dir": "$file_path"
+}

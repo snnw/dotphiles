@@ -1,0 +1,37 @@
+{
+	"in_process_packages":
+	[
+	],
+	"installed_dependencies":
+	[
+		"0_package_control_loader",
+		"bz2",
+		"ssl-linux"
+	],
+	"installed_packages":
+	[
+		"AutoWrap",
+		"BracketHighlighter",
+		"BufferScroll",
+		"C++11",
+		"Clang Format",
+		"Clickable URLs",
+		"CTags",
+		"CUDA C++",
+		"Emacs-like Modelines",
+		"Git",
+		"GitGutter",
+		"GPG",
+		"InsertDate",
+		"Markdown Preview",
+		"Package Control",
+		"SideBarEnhancements",
+		"SmartMarkdown",
+		"Solarized Color Scheme",
+		"SublimeLinter",
+		"SublimeLinter-annotations",
+		"Trimmer",
+		"Vintageous",
+		"Wrap Plus"
+	]
+}
