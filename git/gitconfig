@@ -13,10 +13,6 @@
     email = sanne.wouda@gmail.com
     #signingkey = **Your GPG ID**
 
-[branch "master"]
-    remote = origin
-    merge = refs/heads/master
-
 [color]
     branch = always
     diff = always
