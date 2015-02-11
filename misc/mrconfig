@@ -1,11 +1,35 @@
 [DEFAULT]
-include = cat /usr/share/mr/lib/git-svn
+#include = cat /usr/share/mr/lib/git-svn
+
+lib = 
+    hostname="$(hostname)"
+    whoami="$(whoami)"
+    on() {
+        for host in $@; do
+            if [ "${host%@*}" != "${host#*@}" ]; then
+                if [ "$whoami" != "${host%@*}" ]; then
+                    continue
+                fi
+                host="${host#*@}"
+            fi
+            if [ "$hostname" = "$host" ]; then
+                return 0
+            fi
+        done
+        return 1
+    }
+    mylaptop() {
+        on snnw@cthulu
+    }
+
 
 [life]
 checkout = git clone 'git@bitbucket.org:snnw/life.git' 'life'
+skip = ! mylaptop
 
 [src/lists]
 checkout = git clone 'git@bitbucket.org:snnw/snnw_lists.git' 'lists'
+skip = ! mylaptop
 
 [src/bin]
 checkout = git clone 'git@bitbucket.org:snnw/snnw_bin.git' 'bin'
@@ -22,78 +46,102 @@ zap =
 
 [src/archive/database-technology]
 checkout = git clone 'git@bitbucket.org:cse-masters/ws-dt.git' 'database-technology'
+skip = ! mylaptop
 
 [src/archive/geometric-algorithms]
 checkout = git clone 'http://willem3141.webfactional.com/git_ga/ga-code.git' 'geometric-algorithms'
+skip = ! mylaptop
 
 [src/archive/massive-data-code]
 checkout = git clone 'http://willem3141.webfactional.com/git_ga/amd-code.git' 'massive-data-code'
+skip = ! mylaptop
 
 [src/archive/massive-data-docs]
 checkout = git clone 'http://willem3141.webfactional.com/git_ga/amd-docs.git' 'massive-data-docs'
+skip = ! mylaptop
 
 [src/archive/semi_index]
 checkout = git clone 'git@github.com:snnw/semi_index.git' 'semi_index'
+skip = ! mylaptop
 
 [src/archive/sicg]
 checkout = git clone 'git@bitbucket.org:cse-masters/ts-sicg.git' 'sicg'
+skip = ! mylaptop
 
 [src/archive/castle-builder-perfection]
 checkout = git clone 'git@bitbucket.org:snnw/molpy.git' 'castle-builder-perfection'
+skip = ! mylaptop
 
 [src/code/eca-hives]
 checkout = git clone 'git@bitbucket.org:snnw/ecg-hives.git' 'ecg-hives'
+skip = ! mylaptop
 
 [src/code/gtk]
 checkout = git clone 'https://github.com/GNOME/gtk.git' 'gtk'
+skip = ! mylaptop
 
 [src/code/linux]
 checkout = 
 	 git clone 'git@bitbucket.org:snnw/eudyptula-linux.git' 'linux'
 	 cd linux
 	 git remote add upstream 'git://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git'
-
 status = echo "skipping..."
 zap = 
 	 git fetch upstream
 	 git merge upstream/master
 	 git push origin master
+skip = ! mylaptop
 
 [src/code/little]
 checkout = git clone 'git@bitbucket.org:snnw/eudyptula.git' 'little'
 
 [src/code/xmas]
-checkout = git svn clone 'https://svn.cs.ru.nl/repos/xmas' 'xmas'
+checkout = git clone git@bitbucket.org:snnw/xmas.git xmas
+	cd xmas
+	git init -s --username swouda https://svn.cs.ru.nl/repos/xmas
+	git svn fetch
+zap = git svn fetch
+	git merge origin/trunk
+	git push origin develop
 
 [src/doc/capita-report]
 checkout = git clone 'git@bitbucket.org:snnw/capita-fsa.git' 'capita-report'
 
 [src/doc/logic-faq]
 checkout = git clone 'git@bitbucket.org:snnw/lst-faq-document.git' 'logic-faq'
+skip = ! mylaptop
 
 [src/tools/afew]
 checkout = git clone 'https://github.com/teythoon/afew.git' 'afew'
+skip = ! mylaptop
 
 [src/tools/fish-shell]
 checkout = git clone 'git://github.com/fish-shell/fish-shell.git' 'fish-shell'
+skip = ! mylaptop
 
 [src/tools/gnome-terminal-colors-solarized]
 checkout = git clone 'https://github.com/Anthony25/gnome-terminal-colors-solarized.git' 'gnome-terminal-colors-solarized'
+skip = ! mylaptop
 
 [src/tools/hub]
 checkout = git clone 'https://github.com/github/hub.git' 'hub'
+skip = ! mylaptop
 
 [src/tools/ledger]
 checkout = git clone 'https://github.com/ledger/ledger.git' 'ledger'
+skip = ! mylaptop
 
 [src/tools/ninja]
 checkout = git clone 'https://github.com/martine/ninja.git' 'ninja'
+skip = ! mylaptop
 
 [src/tools/z3]
 checkout = git clone 'https://git01.codeplex.com/z3' 'z3'
+skip = ! mylaptop
 
 [src/doc/visualization]
 checkout = git clone 'git@bitbucket.org:snnw/visualization-doc.git' 'visualization'
+skip = ! mylaptop
 
 [src/code/viz-one]
 checkout = git clone 'git@bitbucket.org:snnw/viz-one.git' 'viz-one'
@@ -103,9 +151,12 @@ checkout = git clone 'git@bitbucket.org:snnw/thesis.git' 'thesis'
 
 [src/tools/alot]
 checkout = git clone 'git@github.com:pazz/alot.git' 'alot'
+skip = ! mylaptop
 
 [src/code/llvm]
 checkout = git clone 'http://llvm.org/git/llvm.git' 'llvm'
+skip = ! mylaptop
 
 [src/code/viz-three]
 checkout = git clone 'git@bitbucket.org:snnw/viz-three.git' 'viz-three'
+skip = ! mylaptop
