@@ -22,6 +22,10 @@ lib =
         on snnw@cthulu
     }
 
+zap =
+	git fetch upstream
+	git merge upstream/master
+	git push origin master
 
 [life]
 checkout = git clone 'git@bitbucket.org:snnw/life.git' 'life'
@@ -39,10 +43,6 @@ checkout = git clone 'git@bitbucket.org:snnw/snnw_projects.git' 'projects'
 
 [.dotfiles]
 checkout = git clone 'git@github.com:snnw/dotphiles.git' '.dotfiles'
-zap = 
-	 git fetch upstream
-	 git merge upstream/master
-	 git push origin master
 
 [src/archive/database-technology]
 checkout = git clone 'git@bitbucket.org:cse-masters/ws-dt.git' 'database-technology'
@@ -160,3 +160,8 @@ skip = ! mylaptop
 [src/code/viz-three]
 checkout = git clone 'git@bitbucket.org:snnw/viz-three.git' 'viz-three'
 skip = ! mylaptop
+
+[src/code/Sandcastle-Builder]
+checkout = git clone 'git@github.com:snnw/Sandcastle-Builder.git' 'Sandcastle-Builder'
+	cd Sandcastle-Builder
+	git remote add upstream github:eternaldensity/Sandcastle-Builder.git
