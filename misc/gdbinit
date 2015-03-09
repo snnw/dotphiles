@@ -577,14 +577,3 @@ set print vtbl on
 set print demangle on
 set demangle-style gnu-v3
 set print sevenbit-strings off
-
-
-# chrome specific beautifiers
-
-python
-import sys
-sys.path.insert(0, "/home/snnw/chromium/src/third_party/WebKit/Tools/gdb/")
-import webkit
-import gdb.printing
-sys.path.insert(0, "/home/snnw/chromium/src/tools/gdb/")
-import gdb_chrome
