@@ -19,7 +19,16 @@ DIR=$(cd $(dirname "$0"); pwd)
 # apt-get
 ###############################################################################
 
-if [[ -f $DIR/packages/apt ]]; then
+if [[ -f $DIR/packages/rpm ]] && [[ -x $(which dnf 2>/dev/null) ]]; then
+  exec<$DIR/packages/rpm
+  while read line
+  do
+    if [[ !"$line" =~ (^#|^$) ]]; then
+      package="$packages $line"
+    fi
+  done
+  sudo dnf install $packages
+elif [[ -f $DIR/packages/apt ]] && [[ -x $(which apt-get 2>/dev/null) ]]; then
   exec<$DIR/packages/apt
   while read line
   do
@@ -28,5 +37,8 @@ if [[ -f $DIR/packages/apt ]]; then
     fi
   done
   sudo apt-get install $packages
+else
+  echo "no packages were installed"
+  exit 1
 fi
 
