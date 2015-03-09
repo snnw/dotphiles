@@ -17,20 +17,17 @@
 [files]
 # Uncomment examples below
 dotsyncrc
-#ack/ackrc
+
 anacron
-#aptitude
-#bin:bin
-#ctags/ctags
 config_fish/config.fish:.config/fish/config.fish
-#cmus
-#curl/curlrc
 git/gitconfig
 git/gitignore
 git/gitattributes
 git/tigrc
 git/gitk
-#gnupg
+gnupg
+
+# XXX: not sure if I need this one? has been included in the package itself?
 #grc
 gyp
 #input/editrc
@@ -43,7 +40,7 @@ misc/fonts.conf
 misc/gdbinit
 misc/ledgerrc
 misc/quiltrc
-misc/mrconfig
+mrconfig
 #mutt
 #mutt/muttrc
 #mutt/offlineimaprc
