@@ -27,7 +27,7 @@ git/tigrc
 git/gitk
 gnupg
 
-# XXX: not sure if I need this one? has been included in the package itself?
+# XXX: not sure if this is needed? has been included in the package itself?
 #grc
 gyp
 #input/editrc
