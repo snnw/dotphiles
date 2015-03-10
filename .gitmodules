@@ -13,3 +13,6 @@
 [submodule "vim/dotvim"]
 	path = vim/dotvim
 	url = https://github.com/snnw/dotvim.git
+[submodule "oh-my-fish"]
+	path = oh-my-fish
+	url = git://github.com/bpinto/oh-my-fish.git

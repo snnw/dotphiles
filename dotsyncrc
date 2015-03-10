@@ -35,6 +35,7 @@ misc/gdbinit
 misc/ledgerrc
 misc/quiltrc
 mrconfig
+oh-my-fish
 rpm/rpmmacros
 screen/screenrc
 shell/bashrc
