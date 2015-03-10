@@ -1,6 +1,6 @@
 [DEFAULT]
 include = cat /usr/share/mr/lib/git-svn
-zap =
+zap = 
 	git fetch upstream
 	git merge upstream/master
 	git push origin master
@@ -18,7 +18,10 @@ checkout = git clone 'git@bitbucket.org:snnw/snnw_bin.git' 'bin'
 checkout = git clone 'git@bitbucket.org:snnw/snnw_projects.git' 'projects'
 
 [.dotfiles]
-checkout = git clone 'git@github.com:snnw/dotphiles.git' '.dotfiles'
+checkout =
+    git clone 'git@github.com:snnw/dotphiles.git' '.dotfiles'
+    cd .dotfiles
+    git remote add upstream 'git@github.com:dotphiles/dotphiles.git'
 
 [src/archive/database-technology]
 checkout = git clone 'git@bitbucket.org:cse-masters/ws-dt.git' 'database-technology'
@@ -114,3 +117,6 @@ checkout = git clone 'git@bitbucket.org:snnw/viz-three.git' 'viz-three'
 checkout = git clone 'git@github.com:snnw/Sandcastle-Builder.git' 'Sandcastle-Builder'
 	cd Sandcastle-Builder
 	git remote add upstream github:eternaldensity/Sandcastle-Builder.git
+
+[src/code/musl]
+checkout = git clone 'git://git.musl-libc.org/musl' 'musl'
