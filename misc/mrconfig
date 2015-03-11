@@ -42,7 +42,7 @@ checkout = git clone 'git@bitbucket.org:snnw/snnw_bin.git' 'bin'
 checkout = git clone 'git@bitbucket.org:snnw/snnw_projects.git' 'projects'
 
 [.dotfiles]
-checkout = git clone 'git@github.com:snnw/dotphiles.git' '.dotfiles'
+checkout = git clone --recursive 'git@github.com:snnw/dotphiles.git' '.dotfiles'
 
 [src/archive/database-technology]
 checkout = git clone 'git@bitbucket.org:cse-masters/ws-dt.git' 'database-technology'
@@ -86,11 +86,6 @@ checkout =
 	 cd linux
 	 git remote add upstream 'git://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git'
 status = echo "skipping..."
-zap = 
-	 git fetch upstream
-	 git merge upstream/master
-	 git push origin master
-skip = ! mylaptop
 
 [src/code/little]
 checkout = git clone 'git@bitbucket.org:snnw/eudyptula.git' 'little'
@@ -98,7 +93,7 @@ checkout = git clone 'git@bitbucket.org:snnw/eudyptula.git' 'little'
 [src/code/xmas]
 checkout = git clone git@bitbucket.org:snnw/xmas.git xmas
 	cd xmas
-	git init -s --username swouda https://svn.cs.ru.nl/repos/xmas
+	git svn init -s --username swouda https://svn.cs.ru.nl/repos/xmas
 	git svn fetch
 zap = git svn fetch
 	git merge origin/trunk
