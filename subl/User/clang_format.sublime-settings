@@ -1,3 +1,4 @@
 {
-	"style": "Custom"
+	"binary": "clang-format",
+	"style": "Google"
 }
