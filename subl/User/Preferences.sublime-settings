@@ -11,8 +11,8 @@
 	"highlight_line": true,
 	"ignored_packages":
 	[
-		"Vintageous",
-		"Vintage"
+		"Vintage",
+		"Vintageous"
 	],
 	"index_exclude_patterns":
 	[
